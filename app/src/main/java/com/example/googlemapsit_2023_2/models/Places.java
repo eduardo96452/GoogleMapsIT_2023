@@ -36,9 +36,7 @@ public class Places {
 
     public void setVicinity(String vicinity) { this.vicinity = vicinity; }
 
-    public String getPhoto() { return photo_reference; }
 
-    public void setPhoto(String photo) { this.photo_reference = photo; }
 
 
     public Places(JSONObject a) throws JSONException {

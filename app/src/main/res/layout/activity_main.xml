@@ -7,6 +7,7 @@
     android:background="#F6F2C7"
     tools:context=".MainActivity">
 
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -14,6 +15,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity"
         tools:layout="@android:layout/simple_gallery_item" />
+
 
     <Button
         android:id="@+id/btn_hibrido"
@@ -32,6 +34,7 @@
         android:textSize="9sp"
         android:textStyle="bold"
         tools:ignore="SmallSp"></Button>
+
 
     <Button
         android:id="@+id/btn_normal"
@@ -52,6 +55,7 @@
         android:textStyle="bold"
         tools:ignore="SmallSp" />
 
+
     <Button
         android:id="@+id/btn_satelite"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
@@ -69,6 +73,7 @@
         android:textStyle="bold"
         tools:ignore="SmallSp" />
 
+
     <Button
         android:id="@+id/btn_terreno"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
@@ -84,5 +89,6 @@
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

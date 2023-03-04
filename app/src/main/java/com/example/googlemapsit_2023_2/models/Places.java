@@ -6,6 +6,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+
 public class Places {
     public String location_lat;
     public String location_lng;
@@ -39,6 +40,7 @@ public class Places {
 
     public void setPhoto(String photo) { this.photo_reference = photo; }
 
+
     public Places(JSONObject a) throws JSONException {
         JSONObject geometry = a.getJSONObject("geometry");
         JSONObject location = geometry.getJSONObject("location");
@@ -47,6 +49,7 @@ public class Places {
         icon = a.getString("icon").toString();
         name = a.getString("name").toString();
         vicinity = a.getString("vicinity").toString();
+
 
         if(!a.isNull("opening_hours")){
             JSONObject horario = a.getJSONObject("opening_hours");
@@ -63,6 +66,7 @@ public class Places {
         JSONObject JSONlista = null;
         JSONlista = a;
 
+
         if(!JSONlista.isNull("photos")   ){
             JSONArray JSONlistaphoto = JSONlista.getJSONArray("photos");
             JSONObject photreferen = JSONlistaphoto.getJSONObject(0);
@@ -74,6 +78,7 @@ public class Places {
         System.out.println("Hola aqui la foto = " + photo_reference);
     }
 
+
     public static ArrayList<Places> JsonObjectsBuild(JSONArray datos) throws JSONException {
         ArrayList<Places> places = new ArrayList<>();
 
@@ -82,4 +87,7 @@ public class Places {
         }
         return places;
     }
+
 }
+
+

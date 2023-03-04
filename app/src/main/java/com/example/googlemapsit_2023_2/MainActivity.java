@@ -1,5 +1,6 @@
 package com.example.googlemapsit_2023_2;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,6 +36,7 @@ import com.google.android.gms.maps.model.PolygonOptions;
 import com.google.maps.android.SphericalUtil;
 import java.util.ArrayList;
 
+
 public class MainActivity
         extends AppCompatActivity
         implements OnMapReadyCallback, GoogleMap.OnMapClickListener
@@ -55,6 +57,7 @@ public class MainActivity
 
     }
 
+
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         Mapa = googleMap;
@@ -72,6 +75,7 @@ public class MainActivity
 
         Mapa.setOnMapClickListener(this);
     }
+
 
     private void drawRectangle(LatLng center, double radius) {
         // Crear un objeto LatLngBounds.Builder
@@ -97,6 +101,7 @@ public class MainActivity
 
     }
 
+
     @Override
     public void onMapClick(@NonNull LatLng latLng) {
         this.Mapa.clear();
@@ -107,6 +112,7 @@ public class MainActivity
 
         this.AddMarker(latLng);
     }
+
 
     public void AddMarker(LatLng latLng) {
         String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?fields=name&location="+latLng.latitude+","+latLng.longitude+"&radius=1500&type=bar&key=AIzaSyB5MkIB5lNnQH1kC1tZ3ATeEsv7z66moKs";
@@ -144,21 +150,24 @@ public class MainActivity
         requestQueue.add(stringRequest);
     }
 
+
     public void onClickSatelite(View view) {
         Mapa.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         Mapa.getUiSettings().setZoomControlsEnabled(true);
     }
+
     public void onClickHibrido(View view) {
         Mapa.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         Mapa.getUiSettings().setZoomControlsEnabled(true);
     }
+
     public void onClickNormal(View view) {
         Mapa.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         Mapa.getUiSettings().setZoomControlsEnabled(true);
     }
+
     public void onClickTerrenal(View view) {
         Mapa.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
         Mapa.getUiSettings().setZoomControlsEnabled(true);
     }
-
 }

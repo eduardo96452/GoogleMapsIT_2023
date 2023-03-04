@@ -46,3 +46,5 @@ public class adaptadorplaces implements GoogleMap.InfoWindowAdapter {
     }
 }
 
+
+

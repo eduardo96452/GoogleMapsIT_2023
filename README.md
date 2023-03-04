@@ -1,2 +1,3 @@
 # GoogleMapsIT
-![image](https://user-images.githubusercontent.com/107895582/220814952-b79bf2f2-8199-4da3-91bb-a7096626d05c.png)
+![image](https://user-images.githubusercontent.com/107895582/222875160-6780b769-c0f0-49bd-8f6f-f9bde36be852.png)
+
